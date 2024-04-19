@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Card } from 'antd';
+import qrCodeImage from './images/image-qr-code.png';
+const { Meta } = Card;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Card
+    hoverable
+    style={{
+      width: 300,
+      padding:"10px",
+      margin: 'auto',
+    }}
+    cover={<img className='cover' alt="qrcode" src={qrCodeImage} />}
+  >
+    <Meta title="Improve your front-end skills by building projects" description="Scan the QR code the visit frontend mentor and talking your coding skills to next level" />
+  </Card>
     </div>
   );
 }
